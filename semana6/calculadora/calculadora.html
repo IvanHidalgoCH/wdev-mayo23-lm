@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>calculadora</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+    .footer{
+        text-align: center;
+    }
+
+</style>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <form action="">
+            <div class="mb-3">
+              <label for="" class="form-label">Calculator</label>
+              <input type="Number"
+                class="form-control" name="Numero1" id="Numero1" aria-describedby="helpId" placeholder="Ingrese un número">
+              <small id="helpId" class="form-text text-muted">Digite el número</small>
+              <input type="Number"
+                class="form-control" name="Numero2" id="Numero2" aria-describedby="helpId" placeholder="Ingrese un número">
+              <small id="helpId" class="form-text text-muted">Digite el número</small>
+            </div>
+            <a name="" id="" class="btn btn-success" href="#" role="button" onclick="digitesuma()">suma</a>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="digiteresta()">resta</a>
+            <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="digitedivision()">división</a>
+            <a name="" id="" class="btn btn-warning" href="#" role="button" onclick="digitemultiplicacion()">multiplicación</a>
+        </form>
+    </div>
+  </main>
+  <footer>
+    <p class="footer">
+        Derechos Reservados; Ivánhch 
+    </p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    function digitesuma(){
+        var num1 = Number (document.getElementById("Numero1").value);
+        var num2 = Number (document.getElementById("Numero2").value);
+        var resultado = "el resultado de suma es:" + " " + (num1 + num2);
+        alert(resultado);
+    }
+    function digiteresta(){
+        var num1 = Number (document.getElementById("Numero1").value);
+        var num2 = Number (document.getElementById("Numero2").value);
+        var resultado = "el resultado de resta es:" + " " + (num1 - num2);
+        alert(resultado);
+    }
+    function digitedivision(){
+        var num1 = Number (document.getElementById("Numero1").value);
+        var num2 = Number (document.getElementById("Numero2").value);
+        var resultado = "el resultado de division es:" + " " + (num1 / num2);
+        alert(resultado);
+    }
+    function digitemultiplicacion(){
+        var num1 = Number (document.getElementById("Numero1").value);
+        var num2 = Number (document.getElementById("Numero2").value);
+        var resultado = "el resultado de multiplicacion es:" + " " + (num1 * num2);
+        alert(resultado);
+    }
+  </script>
+</body>
