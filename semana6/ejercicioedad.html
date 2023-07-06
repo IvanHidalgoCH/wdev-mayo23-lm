@@ -1,6 +1,66 @@
-<div class="mb-3">
-    <label for="" class="form-label">Numero</label>
-    <input type="number"
-      class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="">
-    <small id="helpId" class="form-text text-muted">Help text</small>
-  </div>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio de edad</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="mb-3">
+      <label for="" class="form-label">calculo de edad</label>
+      <input type="number"
+        class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="">
+      <small id="helpId" class="form-text text-muted">ingrese en el cuadro de arriba su edad</small>
+    </div>
+    <div>
+      <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+    </div>
+    <div>
+      <span id="soyresultado">---</span>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    function mostrarmensajehtml(){
+      numero = Number(document.getElementById("numero").value);
+      document.getElementById("soyresultado").innerHTML = numero;
+    }
+     a = 10;
+    b = 82;
+    c = 9;
+    d = 9;
+    resultadoa = a>b;
+    resultadob = c!=d;
+    if (a>b) {
+        //si se cumple la condición(true)
+        alert("A es mayor que B")
+    } else {
+        //cuando no se cumple(false)
+        alert("B es mayor que A")
+    }
+  </script>
+</body>
+
+</html>
