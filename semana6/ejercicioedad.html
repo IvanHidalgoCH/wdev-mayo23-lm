@@ -25,10 +25,10 @@
       <small id="helpId" class="form-text text-muted">ingrese en el cuadro de arriba su edad</small>
     </div>
     <div>
-      <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+      <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">calcular edad</a>
     </div>
     <div>
-      <span id="soyresultado">---</span>
+      <span id="resultadodeedad">en este espacio se calcula la edad</span>
     </div>
   </main>
   <footer>
@@ -44,21 +44,14 @@
   </script>
   <script>
     function mostrarmensajehtml(){
-      numero = Number(document.getElementById("numero").value);
-      document.getElementById("soyresultado").innerHTML = numero;
-    }
-     a = 10;
-    b = 82;
-    c = 9;
-    d = 9;
-    resultadoa = a>b;
-    resultadob = c!=d;
-    if (a>b) {
-        //si se cumple la condición(true)
-        alert("A es mayor que B")
+      numero = document.getElementById("numero").value;
+      mayordeedad = "usted es mayor de edad"
+      menordeedad = "usted es menor de edad"
+      if (numero>=65) {
+        document.getElementById("resultadodeedad").innerHTML = mayordeedad;
     } else {
-        //cuando no se cumple(false)
-        alert("B es mayor que A")
+      document.getElementById("resultadodeedad").innerHTML = menordeedad;  
+    }
     }
   </script>
 </body>
