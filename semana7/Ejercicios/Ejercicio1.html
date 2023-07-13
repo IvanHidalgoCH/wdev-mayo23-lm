@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 1</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div>
+        <h1 class="Título">Ejercicio 1</h1>
+    </div>
+        <div class="container">
+            <form action="">
+                <div class="recuadropeq">
+                    <label for="" class="form-label">Invierta aquí para bonos hipotecarios Ganará un 5%</label>
+                    <input type="number"
+                    class="form-control" name="monto1" id="monto1" aria-describedby="helpId" placeholder="Solo se admiten números">
+                </div>
+                <br>
+                <div class="recuadropeq">
+                    <label for="" class="form-label">Invierta aquí el resto. Ganará un 10%</label>
+                    <input type="number" digitGroupSeparator=","
+                    class="form-control" name="monto2" id="monto2" aria-describedby="helpId" placeholder="Solo se admiten números">
+                </div>
+                <br>
+                <div>
+                <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="calcularganancia()">Clic aquí para saber cuanto dinero ganará en uno y dos meses de ambas inversiones</a>
+                </div>
+                    <span class="negrita" id="resultado1">Su ganancia mensual se mostrará aquí</span>
+                    <br>
+                    <span class="negrita" id="resultado2">Su ganancia en dos meses se mostrará aquí</span>
+                </div>
+            </form>
+        </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+    <script>
+        function calcularganancia(){
+            var num1 = Number (document.getElementById("monto1").value);
+            var num2 = Number (document.getElementById("monto2").value);
+            var resultado = (num1 * 5) + (num2 * 10);
+            document.getElementById("resultado1").innerHTML = "Usted en un mes ganará " + resultado / 100;
+            document.getElementById("resultado2").innerHTML = "Usted en dos meses ganará " + (resultado / 100) * 2;
+        }
+    </script>
+</body>
+
+</html>

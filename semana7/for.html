@@ -1,14 +1,21 @@
 <script>
-    // lista de datos
-    var listadatos = ["toyota" ,"lancer mitsubu","tesla","suora toto","BMW","aston martin","ancer","mercedes","McLaren"]
-    //0,1,2,3,4,5,6,7,8,9
-    // es un bucle que tiene un inicio y un final
+    //Tipo de Bucle
+    //Lista de Datos
+    var listadatos = ["Toyota", "Tesla", "Mitsubishi", "Nissan"]
+    //en la informática siempre se empiezan los conteos desde el 0
+    //Es un bucle que tiene un inicio y un final
     // i=0 el inicio
-    // i < 10, validación hasta donde debe llegar 
-    // i++ el autoincrementable i++ --- i += 1 ---- i+1
+    // i < 10, validación hasta donde debe llegar
+    // i++ el autoincrementable i+= 1
     for (i=0; i < 10; i++){
-        console.log(i);
+        alert(i);
     }
-    for (i=0; i <listadatos.length;
-    console.log(listadatos[i]);)
+    //este for hace un recuento a la inversa
+    for (i=10; i > 1; i--){
+    console.log(i);
+  }
+
+    for ( i =0; i <listadatos.length; i++) {
+        alert(listadatos[i]);
+    }
 </script>
