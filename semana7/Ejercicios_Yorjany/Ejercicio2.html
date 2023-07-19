@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        .Título {
+            text-align: center;
+            font-weight: bold;
+            font-size:50px;
+        }
+        .Párrafo {
+            text-align: center;
+            font-size: x-large;
+        }
+        .piepag {
+                text-align: center;
+                color: blue;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+            }
+            .negrita {
+                font-weight: bold;
+            }
+            .letraroja {
+                color: red;
+            }
+            .letraverde {
+                color: green;
+            }
+            .letraspequeñas {
+                font-size: 8px;
+            }
+            .recuadropeq {
+                width: 800px;
+            }
+            .tamimagen {
+                height: 200px;
+                width: 500px;
+            }
+            .centrar {
+                text-align: center;
+            }
+            th {
+                border: 5px solid black;
+                text-align: center;
+            }
+            .tabla{
+                margin: 0 auto;
+            }
+    </style>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div>
+        <h1 class="Título">Ejercicio 2</h1>    
+        <br>
+            <div >
+                <table class="tabla">
+                    <th>
+                    <p class="Párrafo">Usted va a hacer compras por 12000 colones en un comercio y el vendedor le ofrece un descuento de 1000 colones</p>
+                    <p class="Párrafo">demuestre como sería más barato el precio final, si primero le aplican el descuento y luego le cobran el 13% de impuesto</p>
+                    <p class="Párrafo">o que primero le carguen el 13% de impuesto, y luego le hagan el descuento.</p>
+                    </th>
+                </table>
+            </div>
+            <br>
+    </div>
+        <div class="container">
+            <form action="">
+                <div class="recuadropeq">
+                    <label for="" class="form-label">Ingrese el precio neto (Sin IVA)</label>
+                    <input type="number"
+                    class="form-control" name="PrecioNeto" id="PrecioNeto" aria-describedby="helpId" placeholder="Solo se admiten números">
+                </div>
+                <br>
+                <div>
+                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="IVA()">IVA</a>
+                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="PrimeroDesc()">Primero Descuento y luego IVA</a>
+                <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="PrimeroIVA()">Primero IVA y luego Descuento</a>
+                </div>
+                    <span class="negrita" id="PrecioFinal">Precio Final</span>
+                    <br>
+                    <span class="negrita" id="IVA">Tasa de IVA 13%</span>
+            </form>
+        </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+    <script>
+        function PrimeroDesc(){
+        var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = (num1 - 1000);
+            document.getElementById("PrecioFinal").innerHTML = "Su precio final realizando primero el descuento de mil colones es: " + (((resultado * 13) / 100) + resultado);
+        }
+        function PrimeroIVA(){
+            var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = ((num1 * 13) / 100);
+            document.getElementById("PrecioFinal").innerHTML = "Su precio final agregando primero el IVA es: " + ((resultado + num1) - 1000);
+        }
+        function IVA(){
+            var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = (num1 * 13);
+            document.getElementById("IVA").innerHTML = "Tasa de IVA (13%)" + resultado / 100;
+        }
+    </script>
+</body>
+</html>
