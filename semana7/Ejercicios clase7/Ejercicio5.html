@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Ejercicio 3</title>
+  <title>Ejercicio 5</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,9 +13,9 @@
 
     <style>
           .Título {
-          text-align: center;
+          text-align: left;
           font-weight: bold;
-          font-size:50px;
+          font: size 40px;px;
       }
           .Párrafo {
           text-align: center;
@@ -31,10 +31,10 @@
               font-weight: bold;
           }
           .letraroja {
-              color: red;
+              color: rgb(0, 255, 76);
           }
           .letraverde {
-              color: green;
+              color: rgb(0, 13, 128);
           }
           .letraspequeñas {
               font-size: 8px;
@@ -50,7 +50,7 @@
               text-align: center;
           }
           th {
-              border: 5px solid black;
+              border: 5px solid rgb(155, 34, 34);
               text-align: center;
           }
           .tabla{
@@ -65,43 +65,25 @@
   </header>
   <main>
     <div>
-      <h1 class="Título">Ejercicio 3</h1>    
-      <br>
-          <div >
-              <table class="tabla">
-                  <th>
-                  <p class="Párrafo">Escriba un algoritmo que lea los siguientes valores:</p>
-                  <p class="Párrafo">precio, impuesto y descuento.</p>
-                  <p class="Párrafo">y calcule el valor total de la factura.</p>
-                  </th>
-              </table>
-          </div>
-          <br>
+      <h1 class="Título">Ejercicio5</h1>    
   </div>
       <div class="container">
           <form action="">
               <div class="recuadropeq">
-                  <label for="" class="form-label">Precio</label>
-                  <input type="number"
-                  class="form-control" name="Precio" id="Precio" aria-describedby="helpId" placeholder="Solo se admiten números">
+                  <label for="" class="form-label">Ingresar su sexo</label>
+                  <input type="text"
+                  class="form-control" name="Sexo" id="Sexo" aria-describedby="helpId" placeholder="Indique aquí su sexo">
               </div>
-              <br>
               <div class="recuadropeq">
-                <label for="" class="form-label">Impuesto (%)</label>
+                <label for="" class="form-label">Ingresar su edad</label>
                 <input type="number"
-                class="form-control" name="Impuesto" id="Impuesto" aria-describedby="helpId" placeholder="Solo se admiten números">
-            </div>
-            <br>
-            <div class="recuadropeq">
-                <label for="" class="form-label">Descuento</label>
-                <input type="number"
-                class="form-control" name="Descuento" id="Descuento" aria-describedby="helpId" placeholder="Solo se admiten números">
+                class="form-control" name="Edad" id="Edad" aria-describedby="helpId" placeholder="Indique aquí su edad">
             </div>
               <br>
               <div>
-              <a name="" id="" class="btn btn-success" href="#" role="button" onclick="Valor()">¿Valor total de la factura?</a>
+              <a name="" id="" class="btn btn-success" href="#" role="button" onclick="Valor()">¿Se puede usted pensionar?</a>
               </div>
-                  <span class="negrita" id="ValorTotal">El valor total de la factura es:</span>
+                  <span class="negrita" id="Resultado">La respuesta es:</span>
           </form>
       </div>
   </main>
@@ -117,13 +99,19 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   <script>
-   function Valor(){
-        var Precio = Number (document.getElementById("Precio").value);
-        var Impuesto = Number (document.getElementById("Impuesto").value);
-        var Descuento = Number (document.getElementById("Descuento").value);
-        var Resultado = (((Precio - Descuento) * Impuesto) / 100);
-        document.getElementById("ValorTotal").innerHTML = "El valor total de la factura es: " + (Resultado + (Precio-Descuento));
-        }
+    function Valor(){
+      a = Text (document.getElementById("Sexo").value)="Hombre";
+      b = Number (document.getElementById("Edad").value)=65;
+      sicumple = "✔ Usted si califica para el gose de su pension.";
+      nocumple = "❌ Usted no califica para ser pensionado.";
+      nocumplecrit = "Los datos ingresados son incorrectos"
+    resultadoa = a!=b;
+    resultadob = b>=65;
+    document.getElementById("Resultado").innerHTML = ("a y b" + resultadoa);
+    document.getElementById("Resultado").innerHTML = ("a y b" + resultadob);
+    document.getElementById("Resultado").innerHTML = (resultadoa && resultadob);
+    document.getElementById("Resultado").innerHTML = (sicumple);
+    }
 </script>
 </body>
 </html>

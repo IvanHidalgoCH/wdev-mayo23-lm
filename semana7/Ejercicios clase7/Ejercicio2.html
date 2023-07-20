@@ -13,7 +13,7 @@
 
     <style>
         .Título {
-            text-align: center;
+            text-align: left;
             font-weight: bold;
             font-size:50px;
         }
@@ -23,7 +23,7 @@
         }
         .piepag {
                 text-align: center;
-                color: blue;
+                color: rgb(126, 62, 112);
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: bold;
             }
@@ -31,10 +31,10 @@
                 font-weight: bold;
             }
             .letraroja {
-                color: red;
+                color: rgb(229, 255, 0);
             }
             .letraverde {
-                color: green;
+                color: rgb(0, 128, 128);
             }
             .letraspequeñas {
                 font-size: 8px;
@@ -50,7 +50,7 @@
                 text-align: center;
             }
             th {
-                border: 5px solid black;
+                border: 5px solid rgb(173, 38, 38);
                 text-align: center;
             }
             .tabla{
@@ -65,35 +65,23 @@
   </header>
   <main>
     <div>
-        <h1 class="Título">Ejercicio 2</h1>    
-        <br>
-            <div >
-                <table class="tabla">
-                    <th>
-                    <p class="Párrafo">Usted va a hacer compras por 12000 colones en un comercio y el vendedor le ofrece un descuento de 1000 colones</p>
-                    <p class="Párrafo">demuestre como sería más barato el precio final, si primero le aplican el descuento y luego le cobran el 13% de impuesto</p>
-                    <p class="Párrafo">o que primero le carguen el 13% de impuesto, y luego le hagan el descuento.</p>
-                    </th>
-                </table>
-            </div>
-            <br>
-    </div>
+        <h1 class="Título">Ejercicio2</h1>    
         <div class="container">
             <form action="">
                 <div class="recuadropeq">
-                    <label for="" class="form-label">Ingrese el precio neto (Sin IVA)</label>
+                    <label for="" class="form-label">Ingresar el precio neto (Sin IVA)</label>
                     <input type="number"
                     class="form-control" name="PrecioNeto" id="PrecioNeto" aria-describedby="helpId" placeholder="Solo se admiten números">
                 </div>
                 <br>
                 <div>
                 <a name="" id="" class="btn btn-success" href="#" role="button" onclick="IVA()">IVA</a>
-                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="PrimeroDesc()">Primero Descuento y luego IVA</a>
-                <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="PrimeroIVA()">Primero IVA y luego Descuento</a>
+                <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="PrimeroDesc()">Descuento, mas el IVA</a>
+                <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="PrimeroIVA()">IVA, mas  Descuento</a>
                 </div>
                     <span class="negrita" id="PrecioFinal">Precio Final</span>
                     <br>
-                    <span class="negrita" id="IVA">Tasa de IVA 13%</span>
+                    <span class="negrita" id="IVA">IVA del 13%</span>
             </form>
         </div>
   </main>
@@ -113,12 +101,12 @@
         function PrimeroDesc(){
         var num1 = Number (document.getElementById("PrecioNeto").value);
             var resultado = (num1 - 1000);
-            document.getElementById("PrecioFinal").innerHTML = "Su precio final realizando primero el descuento de mil colones es: " + (((resultado * 13) / 100) + resultado);
+            document.getElementById("PrecioFinal").innerHTML = "Precio final realizando del descuento de mil colones: " + (((resultado * 13) / 100) + resultado);
         }
         function PrimeroIVA(){
             var num1 = Number (document.getElementById("PrecioNeto").value);
             var resultado = ((num1 * 13) / 100);
-            document.getElementById("PrecioFinal").innerHTML = "Su precio final agregando primero el IVA es: " + ((resultado + num1) - 1000);
+            document.getElementById("PrecioFinal").innerHTML = "Precio final agregando primero el IVA es: " + ((resultado + num1) - 1000);
         }
         function IVA(){
             var num1 = Number (document.getElementById("PrecioNeto").value);

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Ejercicio 5</title>
+  <title>Ejercicio3</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
 
     <style>
           .Título {
-          text-align: center;
+          text-align: left;
           font-weight: bold;
           font-size:50px;
       }
@@ -23,7 +23,7 @@
       }
           .piepag {
               text-align: center;
-              color: blue;
+              color: rgb(84, 84, 99);
               font-family: Verdana, Geneva, Tahoma, sans-serif;
               font-weight: bold;
           }
@@ -31,10 +31,10 @@
               font-weight: bold;
           }
           .letraroja {
-              color: red;
+              color: rgb(68, 0, 255);
           }
           .letraverde {
-              color: green;
+              color: rgb(128, 0, 64);
           }
           .letraspequeñas {
               font-size: 8px;
@@ -65,38 +65,32 @@
   </header>
   <main>
     <div>
-      <h1 class="Título">Ejercicio 5</h1>    
-      <br>
-          <div >
-              <table class="tabla">
-                  <th>
-                  <p class="Párrafo">Escriba un algoritmo que permita leer el sexo y la edad de una persona dada</p>
-                  <p class="Párrafo">e imprima si la persona está en edad de pensionarse o no.</p>
-                  <p class="Párrafo">Tomando en cuenta los siguientes datos:</p>
-                  <p class="Párrafo">Hombres: edad de pensión mayor de 65 años.</p>
-                  <p class="Párrafo">Mujeres: edad de pensión mayor a 62 años.</p>
-                  </th>
-              </table>
-          </div>
-          <br>
+      <h1 class="Título">Ejercicio3</h1>    
   </div>
       <div class="container">
           <form action="">
               <div class="recuadropeq">
-                  <label for="" class="form-label">Ingrese su sexo</label>
-                  <input type="text"
-                  class="form-control" name="Sexo" id="Sexo" aria-describedby="helpId" placeholder="Indique aquí su sexo">
+                  <label for="" class="form-label">Precio</label>
+                  <input type="number"
+                  class="form-control" name="Precio" id="Precio" aria-describedby="helpId" placeholder="Solo se admiten números">
               </div>
+              <br>
               <div class="recuadropeq">
-                <label for="" class="form-label">Ingrese su edad</label>
+                <label for="" class="form-label">Impuesto (%)</label>
                 <input type="number"
-                class="form-control" name="Edad" id="Edad" aria-describedby="helpId" placeholder="Indique aquí su edad">
+                class="form-control" name="Impuesto" id="Impuesto" aria-describedby="helpId" placeholder="Solo se admiten números">
+            </div>
+            <br>
+            <div class="recuadropeq">
+                <label for="" class="form-label">Descuento</label>
+                <input type="number"
+                class="form-control" name="Descuento" id="Descuento" aria-describedby="helpId" placeholder="Solo se admiten números">
             </div>
               <br>
               <div>
-              <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="Valor()">¿Se puede usted pensionar?</a>
+              <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="Valor()">¿Valor total de la factura?</a>
               </div>
-                  <span class="negrita" id="Resultado">Aquí se mostrará la respuesta</span>
+                  <span class="negrita" id="ValorTotal"> Valor total de la factura:</span>
           </form>
       </div>
   </main>
@@ -112,19 +106,13 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   <script>
-    function Valor(){
-      a = Text (document.getElementById("Sexo").value)="Hombre";
-      b = Number (document.getElementById("Edad").value)=65;
-      sicumple = "✔ Usted cumple con los requisitos para ser pensionado.";
-      nocumple = "❌ Usted no cumple con los requisitos para ser pensionado.";
-      nocumplecrit = "Los datos ingresados son incorrectos"
-    resultadoa = a!=b;
-    resultadob = b>=65;
-    document.getElementById("Resultado").innerHTML = ("a y b" + resultadoa);
-    document.getElementById("Resultado").innerHTML = ("a y b" + resultadob);
-    document.getElementById("Resultado").innerHTML = (resultadoa && resultadob);
-    document.getElementById("Resultado").innerHTML = (sicumple);
-    }
+   function Valor(){
+        var Precio = Number (document.getElementById("Precio").value);
+        var Impuesto = Number (document.getElementById("Impuesto").value);
+        var Descuento = Number (document.getElementById("Descuento").value);
+        var Resultado = (((Precio - Descuento) * Impuesto) / 100);
+        document.getElementById("ValorTotal").innerHTML = "Valor total de la factura: " + (Resultado + (Precio-Descuento));
+        }
 </script>
 </body>
 </html>

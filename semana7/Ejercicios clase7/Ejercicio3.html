@@ -13,7 +13,7 @@
 
     <style>
           .Título {
-          text-align: center;
+          text-align: left;
           font-weight: bold;
           font-size:50px;
       }
@@ -23,7 +23,7 @@
       }
           .piepag {
               text-align: center;
-              color: blue;
+              color: rgb(93, 93, 126);
               font-family: Verdana, Geneva, Tahoma, sans-serif;
               font-weight: bold;
           }
@@ -31,10 +31,10 @@
               font-weight: bold;
           }
           .letraroja {
-              color: red;
+              color: rgb(0, 60, 255);
           }
           .letraverde {
-              color: green;
+              color: rgb(0, 119, 128);
           }
           .letraspequeñas {
               font-size: 8px;
@@ -50,7 +50,7 @@
               text-align: center;
           }
           th {
-              border: 5px solid black;
+              border: 5px solid rgb(168, 31, 31);
               text-align: center;
           }
           .tabla{
@@ -65,19 +65,7 @@
   </header>
   <main>
     <div>
-      <h1 class="Título">Ejercicio 3</h1>    
-      <br>
-          <div >
-              <table class="tabla">
-                  <th>
-                  <p class="Párrafo">Escriba un algoritmo que lea dos valores,</p>
-                  <p class="Párrafo">determine el mayor valor e imprima el mayor</p>
-                  <p class="Párrafo">valor con un mensaje de identificación.</p>
-                  </th>
-              </table>
-          </div>
-          <br>
-  </div>
+      <h1 class="Título">Ejercicio3</h1>    
       <div class="container">
           <form action="">
               <div class="recuadropeq">
@@ -92,7 +80,7 @@
             </div>
               <br>
               <div>
-              <a name="" id="" class="btn btn-success" href="#" role="button" onclick="Valor()">Click aquí para saber cual valor es mayor</a>
+              <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="Valor()"> Has click para saber valor</a>
               </div>
                   <span class="negrita" id="ResultadoValor">¿Cual valor es mayor?</span>
           </form>
@@ -114,9 +102,9 @@
       var a= Number (document.getElementById("Valor1").value);
       var b= Number (document.getElementById("Valor2").value);
       if (a>b) {
-        document.getElementById("ResultadoValor").innerHTML = "El mayor valor ingresado es: " + a;
+        document.getElementById("ResultadoValor").innerHTML = "Mayor valor: " + a;
                 } else {
-        document.getElementById("ResultadoValor").innerHTML = "El mayor valor ingresado es: " + b;
+        document.getElementById("ResultadoValor").innerHTML = "Mayor valor ingresado: " + b;
               }
             }
 </script>
