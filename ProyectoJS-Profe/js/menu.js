@@ -12,10 +12,10 @@ menuprincipal.innerHTML += `
             <a class="nav-link active" href="https://paginas-web-cr.com/ApiPHP" target="_blank" aria-current="page">Api <span class="visually-hidden">(current)</span></a>
         </li>                
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Curso</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="listarcurso.html">Listar Curso</a>
-                <a class="dropdown-item" href="#">Action 2</a>
+                <a class="dropdown-item" href="listarcurso.html">Listar</a>
+                <a class="dropdown-item" href="#">Crear</a>
             </div>
         </li>
     </ul>

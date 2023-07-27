@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 5</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+          .Título {
+          text-align: center;
+          font-weight: bold;
+          font-size:50px;
+      }
+          .Párrafo {
+          text-align: center;
+          font-size: x-large;
+      }
+          .piepag {
+              text-align: center;
+              color: blue;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-weight: bold;
+          }
+          .negrita {
+              font-weight: bold;
+          }
+          .letraroja {
+              color: red;
+          }
+          .letraverde {
+              color: green;
+          }
+          .letraspequeñas {
+              font-size: 8px;
+          }
+          .recuadropeq {
+              width: 400px;
+          }
+          .tamimagen {
+              height: 200px;
+              width: 500px;
+          }
+          .centrar {
+              text-align: center;
+          }
+          th {
+              border: 5px solid black;
+              text-align: center;
+          }
+          .tabla{
+              margin: 0 auto;
+          }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div>
+      <h1 class="Título">Ejercicio 5</h1>    
+      <br>
+          <div >
+              <table class="tabla">
+                  <th>
+                  <p class="Párrafo">Escriba un algoritmo que permita leer el sexo y la edad de una persona dada</p>
+                  <p class="Párrafo">e imprima si la persona está en edad de pensionarse o no.</p>
+                  <p class="Párrafo">Tomando en cuenta los siguientes datos:</p>
+                  <p class="Párrafo">Hombres: edad de pensión mayor de 65 años.</p>
+                  <p class="Párrafo">Mujeres: edad de pensión mayor a 62 años.</p>
+                  </th>
+              </table>
+          </div>
+          <br>
+  </div>
+      <div class="container">
+          <form action="">
+              <div class="recuadropeq">
+                  <label for="" class="form-label">Ingrese su género</label>
+                  <input type="Text"
+                  class="form-control" name="Sexo" id="Sexo" aria-describedby="helpId" placeholder="Indique si es 'Masculino' o 'Femenino'">
+              </div>
+              <div class="recuadropeq">
+                <label for="" class="form-label">Ingrese su edad</label>
+                <input type="Number"
+                class="form-control" name="Edad" id="Edad" aria-describedby="helpId" placeholder="Indique aquí su edad">
+            </div>
+              <br>
+              <div>
+              <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="botón()">¿Se puede usted pensionar?</a>
+              </div>
+                  <span class="negrita" id="Resultado">Aquí se mostrará la respuesta</span>
+          </form>
+      </div>
+  </main>
+  <footer>
+    <br>
+        <p class="piepag">Realizado por: Yorjany Gamboa</p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    function botón(){
+      a = (document.getElementById("Sexo").value);
+      b = (document.getElementById("Edad").value);
+      h = "Masculino";
+      f = "Femenino";
+      sicumplehombre = "✔ Usted como hombre cumple con los requisitos para ser pensionado.";
+      nocumplehombre = "❌ Usted como hombre no cumple con los requisitos para ser pensionado.";
+      sicumplemujer = "✔ Usted como mujer cumple con los requisitos para ser pensionada.";
+      nocumplemujer = "❌ Usted como mujer no cumple con los requisitos para ser pensionada.";
+      nocumplereq= "⚠ Por favor revise los datos ingresados, ingrese su género como se indica en el primer recuadro."
+    
+    if (a == h && b>=65) {
+      document.getElementById("Resultado").innerHTML = sicumplehombre;
+    }
+    else if (a == f && b>=62) {
+      document.getElementById("Resultado").innerHTML = sicumplemujer;
+      }
+    else if (a == h && b<65) {
+      document.getElementById("Resultado").innerHTML = nocumplehombre;
+      }
+    else if (a == f && b<62) {
+      document.getElementById("Resultado").innerHTML = nocumplemujer;
+      }
+    else {
+      document.getElementById("Resultado").innerHTML = nocumplereq;
+      }
+    }
+</script>
+</body>
+</html>
