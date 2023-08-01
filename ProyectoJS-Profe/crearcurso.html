@@ -24,25 +24,26 @@
       <form id="formulario">
         <div class="mb-3">
           <label for="" class="form-label">Nombre</label>
-          <input type="text"
+          <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
+          tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
+          que pregunte si está vacío o no -->
+          <input required type="text"
             class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
           <small id="helpId" class="form-text text-muted">Nombre</small>
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Descripción</label>
-          <input type="text"
+          <input required type="text"
             class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Ingrese la descripción">
           <small id="helpId" class="form-text text-muted">Descripción</small>
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Tiempo</label>
-          <input type="text"
+          <input required type="text"
             class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo">
           <small id="helpId" class="form-text text-muted">Tiempo</small>
         </div>
-        <button type="reset" class="btn btn-danger">Reset</button>
-        ||
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-secondary">editar</button>
       </form>
     </div>
 
@@ -64,7 +65,6 @@
         </div>
       </div>
     </div>
-    
     
     <!-- Optional: Place to the bottom of scripts -->
     <script>

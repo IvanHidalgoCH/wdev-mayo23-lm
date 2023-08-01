@@ -1,7 +1,9 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apiconsultar = "ListaCurso.php";
-const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
+var apieliminar = "BorrarCursos.php";
 
+const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
+const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -22,13 +24,6 @@ function consultardatos(){
 function ajustardatostabla(datos){
     console.log("datos"+datos);
     for (const objetoindividual of datos) {
-    //    console.log(objetoindividual.id);
-    //    console.log(objetoindividual.nombre);
-    //    console.log(objetoindividual.descripcion);
-    //    console.log(objetoindividual.tiempo);
-    //    console.log(objetoindividual.usuario);
-    //    console.log("///////////");
-
        tablaresultado.innerHTML += `
             <tr class="table-primary">
                                 <td scope="row">${objetoindividual.id}</td>
@@ -37,25 +32,59 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.tiempo}</td>
                                 <td>${objetoindividual.usuario}</td>
                                 <td>
-                                    <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal()">Eliminar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-warning" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}','${objetoindividual.usuario}')">Editar</a>
+                                    ||
+                                    <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
             </tr>
        `;
-    }
-
-
-    // {"id":"3086","nombre":"Api Jul 19","descripcion":"Expres","descripcion":"85","usuario":"Kevin M. VLA"}
-           
+    }   
 }
 
 
-    function mostrarModal(){
+    function mostrarModal(id){
+
+        eliminandodato(id);
+
         myModalEliminar.show();
-        alert("Elimnando");
+        
     }
 
     function eliminandodato(id){
 
+        var datosEnviar = { 
+            "id":id 
+        }
+
+        apiurl = apibase + apieliminar ;
+        fetch(apiurl,
+            {
+                method:'POST',
+                body: JSON.stringify(datosEnviar)
+            })
+        .then(estructura => estructura.json())
+        .then((datosrespuesta) => {
+                completeDelete()
+            })
+        .catch(console.log);
     }
 
+    function completeDelete(){
+        myModalEliminar.hide();
+        tablaresultado.innerHTML = ``;
+        consultardatos();
+        
+    }
+
+    function mostrarEditarModal(id, nombre, descripcion, tiempo){
+        document.getElementById('id').value = id;
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('descripcion').value = descripcion;
+        document.getElementById('tiempo').value = tiempo;
+        myModalEditar.show();
+
+    }
+  //crear una funcion parecida a la del submit
+    //cambiar el metodo de insertar por el de editar
+    //crear una funcion similar a completeDelete
 consultardatos();
