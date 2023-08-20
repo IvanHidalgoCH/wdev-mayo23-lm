@@ -5,7 +5,7 @@ menuprincipal.innerHTML += `<ul class="nav nav-tabs" id="navId" role="tablist">
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="Listarcurso.html">Listar Curso</a>
+        <a class="dropdown-item" href="Listarcurso  .html">Listar Curso</a>
         <a class="dropdown-item" href="#tab3Id">Another action</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="#tab4Id">Action</a>
