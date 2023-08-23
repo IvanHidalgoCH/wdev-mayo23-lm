@@ -18,7 +18,7 @@ formulario.addEventListener('submit', function(e)
         "nombre":document.getElementById('nombre').value ,
         "descripcion":document.getElementById('descripcion').value ,
         "tiempo":document.getElementById('tiempo').value ,
-        "usuario":"Yorjany Gamboa"
+        "usuario":"Ivan Hidalgo"
     }
 
     apiurl = apibase + apieditar;
