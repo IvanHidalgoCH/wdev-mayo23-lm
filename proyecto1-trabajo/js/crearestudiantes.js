@@ -13,9 +13,19 @@ formulario.addEventListener('submit', function(e) //addEventListener() es para j
     //también es para evitar que se cierre el Modal.show
 
     var datosEnviar = {
+        "cedula":document.getElementById('cedula').value ,
+        "correoelectronico":document.getElementById('correoelectronico').value ,
+        "telefono":document.getElementById('telefono').value ,
+        "telefonocelular":document.getElementById('telefonocelular').value ,
+        "fechanacimiento":document.getElementById('fechanacimiento').value ,
+        "sexo":document.getElementById('sexo').value ,
+        "direccion":document.getElementById('direccion').value ,
         "nombre":document.getElementById('nombre').value ,
-        "descripcion":document.getElementById('descripcion').value ,
-        "tiempo":document.getElementById('tiempo').value ,
+        "apellidopaterno":document.getElementById('apellidopaterno').value ,
+        "apellidomaterno":document.getElementById('apellidomaterno').value ,
+        "nacionaidad":document.getElementById('nacionalidad').value ,
+        "idcarreras":document.getElementById('idcarreras').value ,
+        "usuario":document.getElementById('usuario').value ,
         "usuario":"Ivan Hidalgo",
     }
 
@@ -39,5 +49,5 @@ formulario.addEventListener('submit', function(e) //addEventListener() es para j
 });
 
 function completeInsert(){
-    window.location = 'listarcurso.html'
+    window.location = 'listarestudiantes.html'
 }
