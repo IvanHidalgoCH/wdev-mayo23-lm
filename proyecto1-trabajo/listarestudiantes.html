@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Listar Curso</title>
+  <title>Listar estudiantes</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,11 +31,19 @@
                         <caption>Lista de datos</caption>
                         <tr>
                             <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>tiempo</th>
-                            <th>Usuario</th>
-                            <th>Acciones</th>
+                            <th>cedula</th>
+                            <th>correoelectronico</th>
+                            <th>telefono</th>
+                            <th>telefonocelular</th>
+                            <th>fechanacimiento</th>
+                            <th>sexo</th>
+                            <th>direccion</th>
+                            <th>nombre</th>
+                            <th>apellidopaterno</th>
+                            <th>apellidomaterno</th>
+                            <th>nacionalidad</th>
+                            <th>idcarreras</th>
+                            <th>usuario</th>
                         </tr>
                         </thead>
                         <tbody class="table-group-divider" id="tablaresultado">
@@ -84,27 +92,82 @@
                       class="form-control" name="id" id="id" aria-describedby="helpId" placeholder=""> 
                     <small id="helpId" class="form-text text-muted">ID</small>
                   </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Nombre</label>
-                  <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
-                  tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
-                  que pregunte si está vacío o no -->
-                  <input required type="text"
-                    class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
-                  <small id="helpId" class="form-text text-muted">Nombre</small>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Descripción</label>
-                  <input required type="text"
-                    class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Ingrese la descripción">
-                  <small id="helpId" class="form-text text-muted">Descripción</small>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Tiempo</label>
-                  <input required type="text"
-                    class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo">
-                  <small id="helpId" class="form-text text-muted">Tiempo</small>
-                </div>
+                  <div class="container">
+                    <form id="formulario">
+                      <div class="mb-3">
+                        <label for="" class="form-label">cedula</label>
+                        <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
+                        tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
+                        que pregunte si está vacío o no -->
+                        <input required type="text"
+                          class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingrese el cedula">
+                        <small id="helpId" class="form-text text-muted">cedula</small>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">correoelectronico</label>
+                        <input required type="text"
+                          class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="Ingrese la descripción">
+                        <small id="helpId" class="form-text text-muted">correoelectronico</small>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">telefono</label>
+                        <input required type="text"
+                          class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Ingrese el telefono">
+                        <small id="helpId" class="form-text text-muted">telefono</small>
+                        class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Ingrese el tiempo">
+                        <small id="helpId" class="form-text text-muted">telefono</small>
+                        class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Ingres
+                       <div class="mb-3">
+                          <label for="" class="form-label">telefonocelular</label>
+                          <input required type="text"
+                            class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="Ingrese el telefonocelular">
+                          <small id="helpId" class="form-text text-muted">telefonocelular</small>
+                          <div class="mb-3">
+                            <label for="" class="form-label">fechanacimiento</label>
+                            <input required type="text"
+                              class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Ingrese el fechanacimiento">
+                            <small id="helpId" class="form-text text-muted">fechanacimiento</small>
+                            <div class="mb-3">
+                              <label for="" class="form-label">sexo</label>
+                              <input required type="text"
+                                class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Ingrese el sexo">
+                              <small id="helpId" class="form-text text-muted">sexo</small>
+                              <div class="mb-3">
+                                <label for="" class="form-label">direccion</label>
+                                <input required type="text"
+                                  class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Ingrese el direccion">
+                                <small id="helpId" class="form-text text-muted">telefono</small>
+                                <div class="mb-3">
+                                  <label for="" class="form-label">nombre</label>
+                                  <input required type="text"
+                                    class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+                                  <small id="helpId" class="form-text text-muted">nombre</small>
+                                  <div class="mb-3">
+                                    <label for="" class="form-label">apellidopaterno</label>
+                                    <input required type="text"
+                                      class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingrese el apellidopaterno">
+                                    <small id="helpId" class="form-text text-muted">apellidopaterno</small>
+                                    <div class="mb-3">
+                                      <label for="" class="form-label">apellidomaterno</label>
+                                      <input required type="text"
+                                        class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingrese el apellidomaterno">
+                                      <small id="helpId" class="form-text text-muted">apellidomaterno</small>
+                                      <div class="mb-3">
+                                        <label for="" class="form-label">nacionalidad</label>
+                                        <input required type="text"
+                                          class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingrese el nacionalidad">
+                                        <small id="helpId" class="form-text text-muted">nacionalidad</small>
+                                        <div class="mb-3">
+                                          <label for="" class="form-label">idcarreras</label>
+                                          <input required type="text"
+                                            class="form-control" name="idcarreras" id="idcarreras" aria-describedby="helpId" placeholder="Ingrese el idcarreras">
+                                          <small id="helpId" class="form-text text-muted">idcarreras</small>
+                                          <div class="mb-3">
+                                            <label for="" class="form-label">usuario</label>
+                                            <input required type="text"
+                                              class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="Ingrese el usuario">
+                                            <small id="helpId" class="form-text text-muted">usuario</small>
+                      </div>
                 <div class="mb-3"> 
                     <!-- el comando "disabled" sirve para deshabilitar un campo y que este no pueda ser editado y se usa generalmente dentro del input que abre-->
                     <label for="" class="form-label">Usuario</label> 
@@ -169,7 +232,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 
-  <script src="js/listarcurso.js"></script>
+  <script src="js/listarestudiantes.js"></script>
 </body>
 
 </html>

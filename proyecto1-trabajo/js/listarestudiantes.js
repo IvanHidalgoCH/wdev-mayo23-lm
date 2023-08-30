@@ -14,19 +14,19 @@ formulario.addEventListener('submit', function(e)
     e.preventDefault();
     //alert('salvando')
     var datosEnviar = {
-        "id":document.getElementById('id').value,
-        "cedula":document.getElementById('cedula').value ,
-        "correoelectronico":document.getElementById('correoelectronico').value ,
-        "telefonocelular":document.getElementById('telefonocelular').value ,
-        "fechanacimiento":document.getElementById('fechanacimiento').value ,
-        "sexo":document.getElementById('sexo').value ,
-        "direccion":document.getElementById('direccion').value ,
-        "nombre":document.getElementById('nombre').value ,
-        "apellidopaterno":document.getElementById('apellidopaterno').value ,
-        "apellidomaterno":document.getElementById('apellidomaterno').value ,
-        "nacionalidad":document.getElementById('nacionalidad').value ,
-        "idcarreras":document.getElementById('idcarreras').value ,
-        "usuario":document.getElementById('usuario').value ,
+        "id":document.getElementById("id").value,
+        "cedula":document.getElementById("cedula").value ,
+        "correoelectronico":document.getElementById("correoelectronico").value ,
+        "telefonocelular":document.getElementById("telefonocelular").value ,
+        "fechanacimiento":document.getElementById("fechanacimiento").value ,
+        "sexo":document.getElementById("sexo").value ,
+        "direccion":document.getElementById("direccion").value ,
+        "nombre":document.getElementById("nombre").value ,
+        "apellidopaterno":document.getElementById("apellidopaterno").value ,
+        "apellidomaterno":document.getElementById("apellidomaterno").value ,
+        "nacionalidad":document.getElementById("nacionalidad").value ,
+        "idcarreras":document.getElementById("idcarreras").value ,
+        "usuario":document.getElementById("usuario").value ,
          "usuario":"Ivan Hidalgo"
     }
 
@@ -127,21 +127,21 @@ function ajustardatostabla(datos){
         
     }
 
-    function mostrarEditarModal(id, nombre, descripcion, tiempo, usuario){
-        document.getElementById('id').value = id;
-        document.getElementById('cedula').value = nombre;
-        document.getElementById('correoelectronico').value = descripcion;
-        document.getElementById('telefono').value = tiempo;
-        document.getElementById('telefonocelular').value = usuario;
-        document.getElementById('fechanacimiento').value = usuario;
-        document.getElementById('sexo').value = usuario;
-        document.getElementById('direccion').value = usuario;
-        document.getElementById('nombre').value = usuario;
-        document.getElementById('apellidopaterno').value = usuario;
-        document.getElementById('apellidomaterno').value = usuario;
-        document.getElementById('nacionalidad').value = usuario;
-        document.getElementById('idcarreras').value = usuario;
-        document.getElementById('usuario').value = usuario;
+    function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionaidad, idcarreras, usuario ){
+        document.getElementById("id").value = id;
+        document.getElementById("cedula").value = nombre;
+        document.getElementById("correoelectronico").value = descripcion;
+        document.getElementById("telefono").value = tiempo;
+        document.getElementById("telefonocelular").value = usuario;
+        document.getElementById("fechanacimiento").value = usuario;
+        document.getElementById("sexo").value = usuario;
+        document.getElementById("direccion").value = usuario;
+        document.getElementById("nombre").value = usuario;
+        document.getElementById("apellidopaterno").value = usuario;
+        document.getElementById("apellidomaterno").value = usuario;
+        document.getElementById("nacionalidad").value = usuario;
+        document.getElementById("idcarreras").value = usuario;
+        document.getElementById("usuario").value = usuario;
         myModalEditar.show();
     }
 
