@@ -19,10 +19,22 @@ menuprincipal.innerHTML += `
                 <a class="dropdown-item" href="crearcurso.html">Crear</a>
             </div>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Curso</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">estudiantes</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
                 <a class="dropdown-item" href="listarestudiantes.html">Listar</a>
                 <a class="dropdown-item" href="crearestudiantes.html">Crear</a>
+            </div>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">profesores</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="listarprofesores.html">Listar</a>
+                <a class="dropdown-item" href="crearprofesores.html">Crear</a>
+            </div>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">grupo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="listargrupo.html">Listar</a>
+                <a class="dropdown-item" href="creargrupo.html">Crear</a>
             </div>
     </ul>
 </div>

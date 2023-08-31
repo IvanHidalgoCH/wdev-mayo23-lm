@@ -4,7 +4,7 @@ const ModalSucces = new bootstrap.Modal(document.getElementById('ModalSuccess'))
 //<--y se le pone el ID del primer div del modal, abajo de "if you want"
 
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrear = "Insertarestudiantes.php";
+var apicrear = "Insertargrupo.php";
 
 formulario.addEventListener('submit', function(e) //addEventListener() es para jalar la información del type del botón Enviar ("submit")-->
 //<--y se le agrega la "function(e)" para evitar que se recargue el alerta del modal
@@ -13,23 +13,9 @@ formulario.addEventListener('submit', function(e) //addEventListener() es para j
     //también es para evitar que se cierre el Modal.show
 
     var datosEnviar = {
-        "cedula":document.getElementById('cedula').value ,
-        "correoelectronico":document.getElementById('correoelectronico').value ,
-        "telefono":document.getElementById('telefono').value ,
-        "telefonocelular":document.getElementById('telefonocelular').value ,
-        "fechanacimiento":document.getElementById('fechanacimiento').value ,
-        "sexo":document.getElementById('sexo').value ,
-        "direccion":document.getElementById('direccion').value ,
-        "nombre":document.getElementById('nombre').value ,
-        "apellidopaterno":document.getElementById('apellidopaterno').value ,
-        "apellidomaterno":document.getElementById('apellidomaterno').value ,
-        "nacionaidad":document.getElementById('nacionalidad').value ,
-        "idcarreras":document.getElementById('idcarreras').value ,
-        "usuario":document.getElementById('usuario').value ,
-        "usuario":"Ivan Hidalgo",
+        "nombregrupo":document.getElementById('nombregrupo').value ,
     }
-
-    apiurl = apibase + apicrear;
+      apiurl = apibase + apicrear;
         fetch(apiurl,
             {
                 method:'POST',
@@ -49,5 +35,5 @@ formulario.addEventListener('submit', function(e) //addEventListener() es para j
 });
 
 function completeInsert(){
-    window.location = 'listarestudiantes.html'
+    window.location = 'listargrupo.html'
 }

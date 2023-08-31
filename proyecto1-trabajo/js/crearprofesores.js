@@ -4,7 +4,7 @@ const ModalSucces = new bootstrap.Modal(document.getElementById('ModalSuccess'))
 //<--y se le pone el ID del primer div del modal, abajo de "if you want"
 
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrear = "Insertarestudiantes.php";
+var apicrear = "Insertarprofesores.php";
 
 formulario.addEventListener('submit', function(e) //addEventListener() es para jalar la información del type del botón Enviar ("submit")-->
 //<--y se le agrega la "function(e)" para evitar que se recargue el alerta del modal
@@ -49,5 +49,5 @@ formulario.addEventListener('submit', function(e) //addEventListener() es para j
 });
 
 function completeInsert(){
-    window.location = 'listarestudiantes.html'
+    window.location = 'listarprofesores.html'
 }

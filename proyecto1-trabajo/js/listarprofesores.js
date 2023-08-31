@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "Listaestudiantes.php";
-var apieliminar = "Borrarestudiantes.php";
-var apieditar = "Actualizarestudiantes.php";
+var apiconsultar = "Listaprofesores.php";
+var apieliminar = "Borrarprofesores.php";
+var apieditar = "Actualizarprofesores.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
