@@ -1,5 +1,5 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "Listaprofesores.php";
+var apiconsultar = "Listaprofesore.php";
 var apieliminar = "Borrarprofesores.php";
 var apieditar = "Actualizarprofesores.php";
 
