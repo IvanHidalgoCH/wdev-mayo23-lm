@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "Listagrupo.php";
-var apieliminar = "Borrargrupos.php";
-var apieditar = "Actualizargrupos.php";
+var apiconsultar = "ListaGrupo.php";
+var apieliminar = "BorrarGrupo.php";
+var apieditar = "ActualizarGrupo.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
@@ -15,7 +15,7 @@ formulario.addEventListener('submit', function(e)
     //alert('salvando')
     var datosEnviar = {
         "id":document.getElementById('id').value,
-        "nombregrupo":document.getElementById('nombregrupo').value ,     
+        "nombre":document.getElementById('nombre').value,
     }
 
     apiurl = apibase + apieditar;
@@ -26,7 +26,7 @@ formulario.addEventListener('submit', function(e)
             })
         .then(estructura => estructura.json())
         .then((datosrespuesta) => {
-            alert("Salvado")
+            alert("Salvado, por favor recargue la página para ver reflejado el cambio")
                 //ModalSucces.show()
                 completeInsert() 
             })
@@ -57,10 +57,9 @@ function ajustardatostabla(datos){
        tablaresultado.innerHTML += `
             <tr class="table-primary">
                                 <td scope="row">${objetoindividual.id}</td>
-                                <td>${objetoindividual.nombregrupo}</td>
-                               
+                                <td>${objetoindividual.nombre}</td>
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-warning" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombregrupo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-warning" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -104,9 +103,10 @@ function ajustardatostabla(datos){
         
     }
 
-    function mostrarEditarModal(id, nombregrupo){
+    function mostrarEditarModal(id, nombre){
         document.getElementById('id').value = id;
-        document.getElementById('nombre').value = nombregrupo;
+        document.getElementById('nombre').value = nombre;
+        myModalEditar.show();
     }
 
 consultardatos();

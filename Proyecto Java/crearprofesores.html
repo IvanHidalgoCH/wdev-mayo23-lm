@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Crear Profesores</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+  <div id="menuprincipal">
+
+  </div>
+  </header>
+  <main>
+    <div class="container">
+      <form id="formulario">
+        <div class="mb-3">
+          <label for="" class="form-label">Cedula</label>
+          <input required type="text"
+            class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingrese la cédula">
+          <small id="helpId" class="form-text text-muted">Cedula</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Nombre</label>
+          <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
+          tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
+          que pregunte si está vacío o no -->
+          <input required type="text"
+            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+          <small id="helpId" class="form-text text-muted">Nombre</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Apellido Paterno</label>
+          <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
+          tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
+          que pregunte si está vacío o no -->
+          <input required type="text"
+            class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingrese el Apellido Paterno">
+          <small id="helpId" class="form-text text-muted">Apellido Paterno</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Apellido Materno</label>
+          <!-- la palabra "required" se usa en los inputs para que salga un mensaje de que los cuadros de texto
+          tienen que ser llenados, además funcionan con un botón de submit, si fuera con una función hay que incluir un IF 
+          que pregunte si está vacío o no -->
+          <input required type="text"
+            class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingrese el Apellido Materno">
+          <small id="helpId" class="form-text text-muted">Apellido Materno</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Fecha de Nacimiento</label>
+          <input required type="text"
+            class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Ingrese la fecha de nacimiento">
+          <small id="helpId" class="form-text text-muted">Fecha de Nacimiento</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Sexo</label>
+          <input required type="text"
+            class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Ingrese el Sexo">
+          <small id="helpId" class="form-text text-muted">Sexo</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Nacionalidad</label>
+          <input required type="text"
+            class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingrese el nacionalidad">
+          <small id="helpId" class="form-text text-muted">Nacionalidad</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Dirección</label>
+          <input required type="text"
+            class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Ingrese su dirección exacta">
+          <small id="helpId" class="form-text text-muted">Dirección</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Teléfono</label>
+          <input required type="text"
+            class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Digite su número de teléfono">
+          <small id="helpId" class="form-text text-muted">Teléfono</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Teléfono Celular</label>
+          <input required type="text"
+            class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="Digite su número de celular">
+          <small id="helpId" class="form-text text-muted">Teléfono Celular</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Correo Electrónico</label>
+          <input required type="text"
+            class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="Ingrese su correo">
+          <small id="helpId" class="form-text text-muted">Correo Electrónico</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Id de Carreras</label>
+          <input required type="text"
+            class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Ingrese el ID de carreras">
+          <small id="helpId" class="form-text text-muted">Id de Carreras</small>
+        </div>
+        <button type="reset" class="btn btn-danger">Reset</button>
+        ||
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="ModalSuccess" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Modal Complete Success</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Ingreso exitoso
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+    
+    </script>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+
+  <script src="js/menu.js"></script>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="js/crearprofesor.js"></script>
+</body>
+
+</html>
