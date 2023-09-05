@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            alert("Bienvenidos");
+            $("#sumar").click(function (e) { 
+            // e.preventDefault();
+            MostrarSuma();
+            });
+            $("#restar").click(function (e) { 
+            // e.preventDefault();
+            MostrarResta();
+            });
+            $("#multiplicar").click(function (e) { 
+            // e.preventDefault();
+            MostrarMulti();
+            });
+            $("#dividir").click(function (e) { 
+            // e.preventDefault();
+            $().val();
+
+        });
+        function mostramensaje() {
+            alert ("hola");
+        };
+ //CALCULADORA
+    function MostrarSuma(){
+      var num1 = $("#Numero1").val();
+      var num2 = $("#Numero2").val();
+      var resultado = "El resultado de su suma es:" + " " + (num1 + num2);
+      alert (resultado)
+    }
+    function MostrarResta(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su resta es:" + " " + (num1 - num2);
+      alert (resultado)
+    }
+    function MostrarMulti(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su multiplicación es:" + " " + (num1 * num2);
+      alert (resultado)
+    }
+    function MostrarDiv(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su división es:" + " " + (num1 / num2);
+      alert (resultado)
+    }
+    </script>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div>
+        <div class="mb-3">
+          <label for="" class="form-label">Primer Valor</label>
+          <input type="number"
+            class="form-control" name="Numero1" id="Numero1" aria-describedby="helpId" placeholder="Introduzca el primer valor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Segundo Valor</label>
+          <input type="number"
+            class="form-control" name="Numero2" id="Numero2" aria-describedby="helpId" placeholder="Introduzca el segundo valor">
+        </div>
+    </div>
+    <div>
+        <a name="sumar" id="sumar" class="btn btn-primary" href="#" role="button">Sumar</a>
+        <a name="restar" id="restar" class="btn btn-primary" href="#" role="button">Restar</a>
+        <a name="multiplicar" id="multiplicar" class="btn btn-primary" href="#" role="button">Multiplicar</a>
+        <a name="dividir" id="dividir" class="btn btn-primary" href="#" role="button">Dividir</a>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
